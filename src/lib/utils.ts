@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function replaceSpecialChars(str: string) {
-  return str.replace(/&#(\d+);/g, (match, charCode) => {
+  return str.replace(/&#(\d+);/g, (_, charCode) => {
     return String.fromCharCode(charCode);
   });
 }
